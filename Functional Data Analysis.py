@@ -25,7 +25,7 @@ np.random.seed(42)  # For data reproducibility
 # 1. Load Excel File
 # ----------------------------------------------------------
 
-file_path = r"C:/Users/Kayla/Documents/Citrate.xlsx"
+file_path = r"C:/Users/file_path.xlsx"
 df = pd.read_excel(file_path)
 
 # Rename first column to Time if needed
@@ -127,7 +127,7 @@ print("\nResult:", interpretation)
 # 7. Save Statistical Report
 # ----------------------------------------------------------
 
-report_path = r"C:/Users/Kayla/Documents/Functional_Timecourse_Report_citrate.txt"
+report_path = r"C:/Users/file_path.txt"
 
 with open(report_path, "w") as f:
     f.write("Functional Time-Course Comparison Report\n")
@@ -193,7 +193,7 @@ plt.legend()
 plt.tight_layout()
 
 # Save as PDF
-plot_path = r"C:/Users/Kayla/Documents/Functional_Timecourse_Plot_citrate.pdf"
+plot_path = r"C:/Users/file_path.pdf"
 plt.savefig(plot_path, format="pdf")
 
 plt.show()
@@ -228,7 +228,7 @@ else:
 print(report_text)
 
 # Save report to C:/Users/Kayla/Documents/
-report_file = Path(r"C:/Users/Kayla/Documents/Functional_TimeCourse_Report_FBP2.txt")
+report_file = Path(r"C:/Users/filepath_2.txt")
 with open(report_file, "w") as f:
     f.write(report_text)
 
