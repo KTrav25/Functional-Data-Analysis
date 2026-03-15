@@ -1,0 +1,52 @@
+Functional Time-Course Comparison Report
+Generated: 2026-03-15 14:33:21.573267
+
+Replicates per group per timepoint:
+Group   Time
+Group1  0       7
+        6       7
+        12      7
+        24      7
+Group2  0       7
+        6       7
+        12      7
+        24      7
+dtype: int64
+
+Model Summary:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  Value   R-squared:                       0.768
+Model:                            OLS   Adj. R-squared:                  0.745
+Method:                 Least Squares   F-statistic:                     33.16
+Date:                Sun, 15 Mar 2026   Prob (F-statistic):           9.21e-15
+Time:                        14:33:21   Log-Likelihood:                -109.02
+No. Observations:                  56   AIC:                             230.0
+Df Residuals:                      50   BIC:                             242.2
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                    0.1390      0.650      0.214      0.831      -1.166       1.444
+Time                         0.6810      0.137      4.954      0.000       0.405       0.957
+I(Time ** 2)                -0.0132      0.005     -2.486      0.016      -0.024      -0.003
+GroupBinary                  0.2397      0.919      0.261      0.795      -1.606       2.085
+Time:GroupBinary            -0.2543      0.194     -1.308      0.197      -0.645       0.136
+I(Time ** 2):GroupBinary     0.0090      0.008      1.202      0.235      -0.006       0.024
+==============================================================================
+Omnibus:                        8.360   Durbin-Watson:                   2.325
+Prob(Omnibus):                  0.015   Jarque-Bera (JB):                8.771
+Skew:                           0.630   Prob(JB):                       0.0125
+Kurtosis:                       4.474   Cond. No.                     1.51e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.51e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Exact Functional Comparison p-value: 0.4230493450
+
+Interpretation:
+No statistically significant functional difference detected.
