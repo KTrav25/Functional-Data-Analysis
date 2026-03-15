@@ -1,0 +1,52 @@
+Functional Time-Course Comparison Report
+Generated: 2026-03-15 14:35:50.173634
+
+Replicates per group per timepoint:
+Group   Time
+Group1  0       6
+        6       6
+        12      6
+        24      6
+Group2  0       7
+        6       7
+        12      7
+        24      7
+dtype: int64
+
+Model Summary:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  Value   R-squared:                       0.975
+Model:                            OLS   Adj. R-squared:                  0.972
+Method:                 Least Squares   F-statistic:                     352.9
+Date:                Sun, 15 Mar 2026   Prob (F-statistic):           1.78e-35
+Time:                        14:35:50   Log-Likelihood:                -32.468
+No. Observations:                  52   AIC:                             76.94
+Df Residuals:                      46   BIC:                             88.64
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+============================================================================================
+                               coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------
+Intercept                   -0.0364      0.188     -0.194      0.847      -0.415       0.342
+Time                         0.4641      0.040     11.675      0.000       0.384       0.544
+I(Time ** 2)                -0.0042      0.002     -2.740      0.009      -0.007      -0.001
+GroupBinary                 -0.0182      0.256     -0.071      0.944      -0.534       0.497
+Time:GroupBinary            -0.1548      0.054     -2.858      0.006      -0.264      -0.046
+I(Time ** 2):GroupBinary     0.0019      0.002      0.890      0.378      -0.002       0.006
+==============================================================================
+Omnibus:                        0.470   Durbin-Watson:                   2.562
+Prob(Omnibus):                  0.791   Jarque-Bera (JB):                0.243
+Skew:                          -0.168   Prob(JB):                        0.885
+Kurtosis:                       3.000   Cond. No.                     1.57e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.57e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Exact Functional Comparison p-value: 0.0000000236
+
+Interpretation:
+The enrichment time-course functions differ significantly between groups.
